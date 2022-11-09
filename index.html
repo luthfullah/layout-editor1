@@ -2,12 +2,75 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="modernizr.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <link rel="stylesheet" href="./googlefonts.css">
+    <script src="./lib/fabric.min.js"></script>
+    <script src="./lib/jscolor.js"></script>
+
+
+
+
+
 </head>
 <body>
-    hello
+    <nav class="navbar navbar-expand-lg navbar-light bg-blue" style="background-color: #050222;">
+        
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+                <button class="btn btn-primary" onclick="toggleMode(modes.pan)">Toggle Pan</button>
+                <button class="btn btn-primary" onclick="toggleMode(modes.drawing)">Toggle Drawing</button>
+                <input  id='colorPicker' value="#9775FF" data-jscolor="">
+                <button class="btn btn-primary" onclick="clearCanvas(canvas, svgState)">Clear</button>
+                <button class="btn btn-primary" onclick="restoreCanvas(canvas, svgState, bgUrl)">Restore</button>
+                <button class="btn btn-primary" > <input  id="myImg" type="file" accept="image/*"></button>
+                <button class="controls btn btn-primary">
+                 Font-family: <select id="font-family">
+                   </select> 
+                </button>
+                <button onclick="textField()">Text</button>
+               
+            </li>
+           
+          </ul>
+        </div>
+      </nav>
+
+
+
+     <!-- ******CANVAS******
+******************************
+****************************** -->
+
+<div id="container">
+    <input type="file" id="imageLoader" name="imageLoader" />
+    <!-- <canvas id="imageCanvas" width="300" height="300"></canvas> -->
+    <canvas id="canvas" ></canvas>  
+    <a id="lnkDownload" href="#">Save image</a>
+</div>
+      
+
+
+
+
+
     
+<script>
+
+
+</script>
+<script src="http://rawgit.com/bramstein/fontfaceobserver/master/fontfaceobserver.js"></script>
+
+
+<script src="index.js"></script>
+<script>
+
+</script>
+
 </body>
 </html>
